@@ -29,27 +29,8 @@ typedef vector<vii> vvii;
 
 mt19937_64 rang(chrono::high_resolution_clock::now().time_since_epoch().count());
 
-bool is_prime(int n)
-{
-    if (n % 2 == 0 || n < 2)
-        return false;
-    else if (n == 2)
-        return true;
-    for (int i = 3; i * i <= n; ++i)
-        if (n % i == 0)
-            return false;
-    return true;
-}
 
-bool check(vi &v)
-{
-    rep(i, 0, len(v))
-    {
-        if (v[i] > 0)
-            return false;
-    }
-    return true;
-}
+
 
 int main()
 {
